@@ -12,7 +12,8 @@ for i in possLoads:
 		options.append(i)
 
 for i in options:
-	print(possLoads[i])
+	if(re.search("language", possLoads[i]) is not None):
+		print(possLoads[i])
 # payload = {"get":"NAME,B01001_001E", "for":"state:*", "key": key}
 # r = requests.get("api.census.gov/data/2016/acs/acs1", payload)
 # print(r.json())
